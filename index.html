@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./index.css" />
+
+    <!--*Main font-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Solway:400,500,700,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--*time display font-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Combien de temps?!</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Combien de temps ai-je passer entrain de programmer?</h1>
+      </header>
+
+      <div class="timer">
+        <div class="time-section">
+          <div class="ui">
+            <div id="ui-days">DAYS</div>
+            <div id="ui-hours">HOURS</div>
+            <div id="ui-mins">MINS</div>
+            <div id="ui-secs">SECS</div>
+          </div>
+          <div class="time">
+            <div id="days">
+              000
+            </div>
+            <div id="hours">
+              00
+            </div>
+            <div id="minutes">
+              00
+            </div>
+            <div id="seconds">
+              00
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-box">
+        <ul class="button">
+          <li id="startStop" onclick="startAndStop()">Start/Stop</li>
+        </ul>
+      </div>
+      <div class="info">
+        <h3>Qu'est ce que c'est?</h3>
+        <p>
+          Tu veut savoir combien de temps tu passe a programmer?<br />
+          Cette petite application peut t'aider a faire ca facilement! <br />
+          Appuie sur Start quand tu commence a programmer et sur Stop quand t'as
+          finis. <br />
+          L'application retiens en mémoire local le temps passer même après
+          rafraichissiment ou fermeture de page, mais soit sûre de stopper le
+          compteur avant de quitter la page ou bien le temps ne sera pas
+          compter!
+        </p>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

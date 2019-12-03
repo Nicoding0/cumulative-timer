@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #3d738a,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #3d738a,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "Solway", serif;
+}
+
+header {
+  height: 15vh;
+  color: #f1faee;
+}
+
+header h1 {
+  margin: 40px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.info {
+  margin-top: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.486);
+  color: #f1faee;
+  border-radius: 20px;
+}
+
+.info h3 {
+  margin-top: 10px;
+  padding: 2px;
+  border-bottom: 2px solid #f1faee;
+}
+
+.info p {
+  text-align: center;
+  padding: 15px 100px;
+}
+
+.timer {
+  display: flex;
+  margin: 100px 0px 25px 0px;
+  font-size: 35px;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+}
+
+.time-section {
+  background: #f1faee;
+  padding: 20px;
+  border-radius: 20px;
+  width: 500px;
+}
+
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Mono", monospace;
+  font-size: 45px;
+  font-weight: 400;
+}
+
+#days,
+#hours,
+#minutes {
+  margin-right: 30px;
+}
+
+.ui {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 35px;
+}
+
+#ui-days,
+#ui-hours,
+#ui-mins,
+#ui-secs {
+  font-size: 14px;
+  text-align: center;
+  margin-right: 35px;
+  color: rgb(134, 134, 134);
+}
+
+.button {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 20px;
+  margin-top: 100px;
+}
+
+.button li {
+  cursor: pointer;
+  padding: 20px;
+  list-style: none;
+  background: #f1faee;
+  border-radius: 20px;
+}
