@@ -1,7 +1,7 @@
-let days = document.getElementById("days").textContent;
-let hours = document.getElementById("hours").textContent;
-let mins = document.getElementById("minutes").textContent;
-let secs = document.getElementById("seconds").textContent;
+let days = document.getElementById("days");
+let hours = document.getElementById("hours");
+let mins = document.getElementById("minutes");
+let secs = document.getElementById("seconds");
 
 //*this holds the setinterval() value
 let interval = undefined;
@@ -12,10 +12,10 @@ let started = false;
 let startStop = document
   .getElementById("startStop")
   .addEventListener("click", () => {
-    days.textContent = localStorage.getItem("days") || 000;
-    hours.textContent = localStorage.getItem("hours") || 00;
-    mins.textContent = localStorage.getItem("minutes") || 00;
-    secs.textContent = localStorage.getItem("seconds") || 00;
+    days.textContent = localStorage.getItem("days") || "000";
+    hours.textContent = localStorage.getItem("hours") || "00";
+    mins.textContent = localStorage.getItem("minutes") || "00";
+    secs.textContent = localStorage.getItem("seconds") || "00";
   });
 
 window.addEventListener("load", () => {
@@ -25,10 +25,10 @@ window.addEventListener("load", () => {
   mins.textContent = "00";
   secs.textContent = "00";
 
-  days.textContent = localStorage.getItem("days") || 000;
-  hours.textContent = localStorage.getItem("hours") || 00;
-  mins.textContent = localStorage.getItem("minutes") || 00;
-  secs.textContent = localStorage.getItem("seconds") || 00;
+  days.textContent = localStorage.getItem("days") || "000";
+  hours.textContent = localStorage.getItem("hours") || "00";
+  mins.textContent = localStorage.getItem("minutes") || "00";
+  secs.textContent = localStorage.getItem("seconds") || "00";
 });
 
 const timer = () => {
@@ -73,6 +73,8 @@ const timer = () => {
   }
 };
 
+//*gets fired when clicking the startstop button
+//*stops when clicked again because started will be true
 const startAndStop = () => {
   if (!started) {
     interval = setInterval(timer, 1000);
