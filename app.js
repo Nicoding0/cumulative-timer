@@ -1,7 +1,7 @@
-let days = document.getElementById("days");
-let hours = document.getElementById("hours");
-let mins = document.getElementById("minutes");
-let secs = document.getElementById("seconds");
+let days = document.getElementById("days").textContent;
+let hours = document.getElementById("hours").textContent;
+let mins = document.getElementById("minutes").textContent;
+let secs = document.getElementById("seconds").textContent;
 
 //*this holds the setinterval() value
 let interval = undefined;
@@ -12,10 +12,10 @@ let started = false;
 let startStop = document
   .getElementById("startStop")
   .addEventListener("click", () => {
-    days.textContent = localStorage.getItem("days");
-    hours.textContent = localStorage.getItem("hours");
-    mins.textContent = localStorage.getItem("minutes");
-    secs.textContent = localStorage.getItem("seconds");
+    days.textContent = localStorage.getItem("days") || 000;
+    hours.textContent = localStorage.getItem("hours") || 00;
+    mins.textContent = localStorage.getItem("minutes") || 00;
+    secs.textContent = localStorage.getItem("seconds") || 00;
   });
 
 window.addEventListener("load", () => {
