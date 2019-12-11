@@ -19,10 +19,10 @@ let startStop = document
   });
 
 window.addEventListener("load", () => {
-  days.textContent = localStorage.getItem("days");
-  hours.textContent = localStorage.getItem("hours");
-  mins.textContent = localStorage.getItem("minutes");
-  secs.textContent = localStorage.getItem("seconds");
+  days.textContent = localStorage.getItem("days") || 000;
+  hours.textContent = localStorage.getItem("hours") || 00;
+  mins.textContent = localStorage.getItem("minutes") || 00;
+  secs.textContent = localStorage.getItem("seconds") || 00;
 });
 
 const timer = () => {
@@ -78,18 +78,18 @@ const startAndStop = () => {
 
   //*store time in localstorage
   if (days > days.textContent) {
-    localStorage.setItem("days", days.textContent);
+    localStorage.setItem("days", days.textContent) || 000;
   }
 
   if (hours > hours.textContent) {
-    localStorage.setItem("hours", hours.textContent);
+    localStorage.setItem("hours", hours.textContent) || 00;
   }
 
   if (minutes > mins.textContent) {
-    localStorage.setItem("minutes", mins.textContent);
+    localStorage.setItem("minutes", mins.textContent) || 00;
   }
 
   if (seconds > secs.textContent) {
-    localStorage.setItem("seconds", secs.textContent);
+    localStorage.setItem("seconds", secs.textContent) || 00;
   }
 };
