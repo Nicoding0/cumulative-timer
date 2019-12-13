@@ -34,15 +34,15 @@ window.addEventListener("load", () => {
 const timer = () => {
   secs.textContent++;
 
-  //*Add 0 before single digit
-  if (secs.textContent < 10) {
-    secs.textContent = `0${secs.textContent}`;
-  }
-
   //*when 60secs add a minute
   if (secs.textContent === "60") {
     secs.textContent = 0;
     mins.textContent++;
+
+    //*Add 0 before single digit
+    if (secs.textContent < 10) {
+      secs.textContent = `0${secs.textContent}`;
+    }
 
     //*Add 0 before single digit
     if (mins.textContent < 10) {
@@ -74,10 +74,10 @@ const timer = () => {
 };
 
 //*gets fired when clicking the startstop button
-//*stops when clicked again because started will be true
+//*stops when clicked again because started will be false
 const startAndStop = () => {
   if (!started) {
-    interval = setInterval(timer, 1000);
+    interval = setInterval(timer, 1);
     started = true;
   } else {
     window.clearInterval(interval);
