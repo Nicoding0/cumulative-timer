@@ -34,6 +34,11 @@ window.addEventListener("load", () => {
 const timer = () => {
   secs.textContent++;
 
+  //*Add 0 before single digit
+  if (secs.textContent < 10) {
+    secs.textContent = `0${secs.textContent}`;
+  }
+
   //*when 60secs add a minute
   if (secs.textContent === "60") {
     secs.textContent = 0;
@@ -55,6 +60,11 @@ const timer = () => {
       hours.textContent++;
 
       //*Add 0 before single digit
+      if (mins.textContent < 10) {
+        mins.textContent = `0${mins.textContent}`;
+      }
+
+      //*Add 0 before single digit
       if (hours.textContent < 10) {
         hours.textContent = `0${hours.textContent}`;
       }
@@ -64,6 +74,11 @@ const timer = () => {
     if (hours.textContent === "24") {
       hours.textContent = 0;
       days.textContent++;
+
+      //*Add 0 before single digit
+      if (hours.textContent < 10) {
+        hours.textContent = `0${hours.textContent}`;
+      }
 
       //*Add 0 before single digit
       if (days.textContent < 100) {
