@@ -77,7 +77,7 @@ const timer = () => {
 //*stops when clicked again because started will be false
 const startAndStop = () => {
   if (!started) {
-    interval = setInterval(timer, 1);
+    interval = setInterval(timer, 1000);
     started = true;
   } else {
     window.clearInterval(interval);
